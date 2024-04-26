@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="../style/normalize.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__body">
+            <div class="body-header__container container">
+                <a href="../pages/mainPage.php" class="body-header__logo">Kino<p>Raider</p></a>
+                <div class="body-header__search">
+                    <form action="#" class="search-header">
+                        <button type="submit" class="search-header__btn"><img src="../assets/image/icons/search.svg" alt="Search" width="20"></button>
+                        <input autocomplete="off" type="text" name="search" placeholder="Поиск" class="search-header__input">
+                    </form>
+                </div>
+                <a href="login.html" class="header__user"><img src="../assets/image/icons/profile.svg"><p>Личный кабинет</p></a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="login-page">
+            <div class="login-page__container container">
+                <div class="login-page__auth">
+                    <h1>Регистрация</h1>
+                    <form class="registration-page__form" action="#" method="post">
+                        <input type="text" class="registration-page__form-control" name="nickname" id="nickanme" placeholder="Введите никнейм">
+                        <input type="text" class="registration-page__form-control" name="login" id="login" placeholder="Введите e-mail">
+                        <input type="password" class="registration-page__form-control" name="password" id="pass" placeholder="Введите пароль">
+                        <label for="avatar" class="registration-page__avatar-label">Загрузите Ваш аватар:</label>
+                        <input class="registration-page__avatar" type="file" id="avatar" name="avatar" accept=".png, .jpeg" />
+                        <p class="registration-to-login">Есть аккаунт? <a href="login.html" class="registration-page__login-link">Авторизоваться.</a></p>
+                        <button class="registration-page__btn" type="submit">Регистрация</button>
+                    </form>  
+                </div>
+                <img src="../assets/image/img_page/img_registration2.jpeg" class="login-page__img">
+            </div>
+         </div>
+    </main>
+
+</body>
+</html>

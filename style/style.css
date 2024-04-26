@@ -1,42 +1,197 @@
-@font-face{
-    font-family: "Regular";
-    src:local("../assets/font/Montserrat-Regular.ttf");
+@font-face {
+    font-family: 'Regular';
+    src:url("../assets/font/Montserrat-Regular.ttf");
 }
-@font-face{
-    font-family: "Bold";
-    src:local("../assets/font/Montserrat-Bold.ttf");
+
+@font-face {
+    font-family: 'Bold';
+    src:url("../assets/font/Montserrat-Bold.ttf");
 }
-*{
+
+* {
     padding: 0px;
     margin: 0px;
 }
-body{
-    font-family: "Regular";
-    color: white;    
+
+body {
+    font-family: Regular;
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    zoom: 0.8;
+    background: url(../assets/image/img_page/background.jpg) center / cover no-repeat;
 }
-header{
+
+header {
     background-color: #000000;
 }
-.main{
+
+main {
     min-height: 100vh;
     min-width: 100vh;
-    background-color: #1F1F1F;
 }
-.logo{
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 1590px;
+    margin: auto;
+}
+
+/* HEADER____________________________________________________ */
+
+.header__body {
+    padding: 10px 30px;
+}
+
+.body-header__container {
+    max-width: 1590px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:auto;
+    min-height: 60px;
+    padding: 10px 0;
+}
+
+.body-header__logo {
     font-size: 32px;
     font-family: "Bold";
-}
-.row, .col {
+    color: transparent;
+    text-decoration: none;
+    color: #FFF;
+    margin-left: 30px;
     display: flex;
 }
-.row{
-    flex-direction: row;
+
+.body-header__logo p {
+    color: #2165e2;
 }
-.col{
-    flex-direction: column;
+
+.search-header {
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+    border: 1px solid rgba(4, 4, 4, 0.5);
+    margin: 0 auto;
 }
-.content{
-    width: 1540px;
-    margin-left: auto;
-    margin-right: auto;
+
+.search-header__btn {
+    position: absolute;
+    background-color: transparent;
+    top: 2px;
+    left: 8px;
+    height: 41px;
+    width: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.search-header__input {
+    background-color: transparent;
+    border-radius: 3px;;
+    height: 41px;
+    width: 300px;
+    padding: 0 20px 0 50px;
+}
+
+.header__user {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 22px;
+    column-gap: 15px;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            color: #2165e2;
+            text-decoration: underline;
+        }
+    }
+}
+
+.header__user img {
+    width: 38px;
+}
+
+
+/* LOGIN_______________________________________________________________ */
+
+.login-page__container, .registration-page__container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #1F1F1F;
+    min-height: 700px;
+}
+
+.login-page__form-control, .registration-page__form-control {
+    display: block;
+    width: 500px;
+    height: 30px;
+    background-color: rgba(210, 210, 210, 0.95);
+    border-radius: 3px;
+    margin-top: 30px;
+    font-size: 22px;
+    padding-left: 15px;
+}
+
+.registration-page__avatar-label {
+    display: block;
+    width: 500px;
+    height: 30px;
+    margin: 30px 0 15px;
+    font-size: 20px;
+}
+
+.registration-page__avatar {
+    display: block;
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.login-page__auth {
+    padding: 40px 40px;
+}
+
+.login-page__form-control::placeholder, .registration-page__form-control::placeholder {
+    color: #141414;
+}
+
+.login-to-registration, .registration-to-login {
+    margin: 30px 0;
+}
+
+.login-page__registration-link, .registration-page__login-link {
+    color: #2165e2;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.login-page__btn, .registration-page__btn {
+    padding: 10px 70px;
+    margin: auto;
+    font-size: 22px;
+    background-color: #2165e2;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 10px rgba(210, 210, 210, 0.3);
+    transition: box-shadow 0.3s ease 0s;
+    &:hover{
+        box-shadow: 0 0 15px rgba(33, 101, 226, 0.9);
+    }
+}
+
+.login-page__img, .registration-page__img {
+    width: 950px;
 }
